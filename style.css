@@ -1,0 +1,227 @@
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: hsl(228, 39%, 23%);
+}
+p {
+  color: hsl(227, 12%, 61%);
+}
+
+/* screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*
+===============
+Header
+===============
+*/
+header:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background-image: url(./images/bg-tablet-pattern.svg);
+  background-size: cover;
+  background-position: right -14%;
+  background-repeat: no-repeat;
+  background-size: 18rem 18rem;
+  width: 115%;
+  height: 76rem;
+  top: 0vw;
+}
+header .btn {
+  display: none;
+}
+.nav-menu {
+  display: none;
+}
+/* nav desktop btn hide */
+.nav-close-btn {
+  display: none;
+}
+/* nav menu mobile show/hide */
+.nav-menu.show {
+  position: absolute;
+  background-color: white;
+  padding: 2rem;
+  width: calc(100vw - 4rem);
+  top: 4rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 27%);
+}
+.show {
+  display: block;
+}
+.nav-hamburger-btn {
+  display: block;
+}
+.nav-close-btn {
+  display: none;
+  padding-right: 3px;
+}
+.active .nav-close-btn {
+  display: block;
+}
+.active .nav-hamburger-btn {
+  display: none;
+}
+
+/*
+===============
+Main
+===============
+*/
+header {
+  overflow-x: clip;
+}
+/* btns */
+.btn {
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+}
+.orange-btn {
+  color: white;
+  background-color: hsl(12, 88%, 59%);
+  box-shadow: 0px 17px 9px -9px hsl(12deg 95% 54% / 41%);
+}
+.info-number.orange-btn {
+  box-shadow: none;
+}
+.white-btn {
+  color: hsl(12, 88%, 59%);
+  background-color: white;
+}
+/* info */
+.info-title .btn {
+  padding: 0.5rem 1.4rem;
+}
+.info {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.info-title {
+  background-color: hsl(13, 100%, 96%);
+  border-radius: 50px 0 0 50px;
+}
+
+/* hero */
+.hero-section {
+  position: relative;
+  overflow-x: clip;
+}
+.hero-section:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background-image: url(./images/bg-tablet-pattern.svg);
+  background-size: cover;
+  background-position: right 76%;
+  background-repeat: no-repeat;
+  background-size: 22rem 22rem;
+  width: 124%;
+  height: 56rem;
+  top: -8vw;
+  bottom: 0;
+  right: -11rem;
+}
+
+/* slider */
+.slider-person {
+  background-color: hsl(0, 0%, 98%);
+}
+
+/*
+===============
+Footer
+===============
+*/
+/* top */
+.footer-top {
+  color: white;
+  background-color: hsl(12, 88%, 59%);
+  background-image: url(./images/bg-simplify-section-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer-top h3 {
+  color: white;
+}
+/* bottom */
+.footer-bottom {
+  background-color: hsl(233, 12%, 13%);
+  color: white;
+}
+form input {
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  width: 13rem;
+}
+form input::placeholder {
+  font-size: 0.8rem;
+}
+footer li {
+  color: hsl(0deg 0% 67%);
+  text-align: left;
+}
+.footer-social-links a {
+  transform: scale(1.5);
+}
+/* copyright */
+.copyright p {
+  color: hsl(0deg 0% 67%);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (hover) {
+  .nav-menu.show li:hover {
+    color: hsl(12, 88%, 59%);
+  }
+  .orange-btn:hover {
+    background-color: hsl(12, 88%, 69%);
+  }
+  .white-btn:hover {
+    color: hsl(12, 88%, 75%);
+  }
+  .info-number:hover {
+    background-color: hsl(12, 88%, 59%);
+  }
+  footer li:hover {
+    color: hsl(12, 88%, 59%);
+  }
+  .footer-social-links a:hover svg path {
+    fill: hsl(12, 88%, 59%);
+  }
+}
