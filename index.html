@@ -12,16 +12,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- css -->
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    <!-- font -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Public+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- script -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <!-- JS -->
     <script src="./script.js" defer></script>
     <title>Manage landing page</title>
   </head>
@@ -63,7 +67,7 @@
     <main>
       <section class="hero-section mb-10">
         <div class="hero-left">
-          <img src="./images/illustration-intro.svg" alt="graphs illustration" />
+          <img src="./images/illustration-intro.svg" alt="graphs illustration" class="m-auto" />
         </div>
 
         <div class="hero-right flex flex-col gap-2 items-center max-w-xs mx-auto mb-12">
@@ -123,40 +127,84 @@
         </div>
       </section>
 
-      <section class="slider-section px-6 py-10 flex flex-col gap-8 items-center">
-        <h2 class="font-bold text-2xl mb-14">What they’ve said</h2>
-        <div class="slider">
-          <div
-            class="slider-person relative flex flex-col gap-4 items-center justify-center pt-32 px-4 pb-4"
-          >
-            <img
-              src="./images/avatar-anisha.png"
-              alt="person"
-              class="person avatar w-32 absolute -top-10"
-            />
-            <div class="slider-name font-bold">Anisha Li</div>
-            <p>
-              “Manage has supercharged our team’s workflow. The ability to maintain visibility on
-              larger milestones at all times keeps everyone motivated.”
-            </p>
+      <section class="slider-section py-10 flex flex-col gap-8 items-center">
+        <h2 class="font-bold text-2xl">What they’ve said</h2>
+        <div class="slider relative pb-8 md:w-full">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- slide 1 -->
+              <div class="swiper-slide card">
+                <div
+                  class="slider-person relative flex flex-col gap-4 items-center justify-center px-4 py-4"
+                >
+                  <img
+                    src="./images/avatar-anisha.png"
+                    alt="person"
+                    class="person avatar w-32 z-10"
+                  />
+                  <div class="slider-name font-bold">Anisha Li</div>
+                  <p>
+                    “Manage has supercharged our team’s workflow. The ability to maintain visibility
+                    on larger milestones at all times keeps everyone motivated.”
+                  </p>
+                </div>
+              </div>
+              <!-- slide 2 -->
+              <div class="swiper-slide card">
+                <div
+                  class="slider-person relative flex flex-col gap-4 items-center justify-center px-4 py-4"
+                >
+                  <img src="./images/avatar-ali.png" alt="person" class="person avatar w-32 z-10" />
+                  <div class="slider-name font-bold">Ali Bravo</div>
+                  <p>
+                    “We have been able to cancel so many other subscriptions since using Manage.
+                    There is no more cross-channel confusion and everyone is much more focused.”
+                  </p>
+                </div>
+              </div>
+              <!-- slide 3  -->
+              <div class="swiper-slide card">
+                <div
+                  class="slider-person relative flex flex-col gap-4 items-center justify-center px-4 py-4"
+                >
+                  <img
+                    src="./images/avatar-richard.png"
+                    alt="person"
+                    class="person avatar w-32 z-10"
+                  />
+                  <div class="slider-name font-bold">Richard Watts</div>
+                  <p>
+                    “Manage allows us to provide structure and process. It keeps us organized and
+                    focused. I can’t stop recommending them to everyone I talk to!”
+                  </p>
+                </div>
+              </div>
+              <!-- slide 4 -->
+              <div class="swiper-slide card">
+                <div
+                  class="slider-person relative flex flex-col gap-4 items-center justify-center px-4 py-4"
+                >
+                  <img
+                    src="./images/avatar-anisha.png"
+                    alt="person"
+                    class="person avatar w-32 z-10"
+                  />
+                  <div class="slider-name font-bold">Shanai Gough</div>
+                  <p>
+                    “Their software allows us to track, manage and collaborate on our projects from
+                    anywhere. It keeps the whole team in-sync without being intrusive.”
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Anisha Li
-    “Manage has supercharged our team’s workflow. The ability to maintain
-    visibility on larger milestones at all times keeps everyone motivated.”
-
-    Ali Bravo
-    “We have been able to cancel so many other subscriptions since using
-    Manage. There is no more cross-channel confusion and everyone is much
-    more focused.”
-
-    Richard Watts
-    “Manage allows us to provide structure and process. It keeps us organized
-    and focused. I can’t stop recommending them to everyone I talk to!”
-
-    Shanai Gough
-    “Their software allows us to track, manage and collaborate on our projects
-    from anywhere. It keeps the whole team in-sync without being intrusive.” -->
+          <!-- end swiper -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
+        <!-- end slider -->
         <button class="btn orange-btn">Get Started</button>
       </section>
     </main>

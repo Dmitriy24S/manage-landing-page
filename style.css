@@ -153,6 +153,45 @@ header {
 .slider-person {
   background-color: hsl(0, 0%, 98%);
 }
+.slider-person:after {
+  content: "";
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+}
+.slider {
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+}
+.slider:after {
+  content: "";
+  position: absolute;
+  height: 23%;
+  width: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+}
+.swiper {
+  width: 314px;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  left: 90%;
+  color: hsl(12, 88%, 59%);
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: auto;
+  right: 90%;
+  color: hsl(12, 88%, 59%);
+}
+.swiper-pagination-bullet {
+  background: hsl(12, 88%, 59%);
+}
 
 /*
 ===============
@@ -223,5 +262,22 @@ footer li {
   }
   .footer-social-links a:hover svg path {
     fill: hsl(12, 88%, 59%);
+  }
+}
+
+/* swiper desktop */
+@media screen and (min-width: 768px) {
+  .swiper {
+    width: 640px;
+  }
+  .swiper-pagination-bullet {
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+  }
+}
+@media screen and (min-width: 1078px) {
+  .swiper {
+    width: 950px;
   }
 }
