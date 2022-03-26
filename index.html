@@ -31,7 +31,7 @@
   </head>
 
   <body>
-    <header class="relative flex justify-between items-center p-4">
+    <header class="relative flex justify-between items-center p-4 lg:max-w-6xl lg:mx-auto">
       <img src="./images/logo.svg" alt="company logo - manage" />
 
       <button class="nav-toggle-btn">
@@ -65,12 +65,20 @@
     </header>
 
     <main>
-      <section class="hero-section mb-10">
-        <div class="hero-left">
-          <img src="./images/illustration-intro.svg" alt="graphs illustration" class="m-auto" />
+      <section
+        class="hero-section mb-10 lg:flex lg:flex-row-reverse lg:items-center lg:justify-center lg:gap-4 lg:max-w-7xl lg:mx-auto lg:mt-12"
+      >
+        <div class="hero-left lg:w-2/5">
+          <img
+            src="./images/illustration-intro.svg"
+            alt="graphs illustration"
+            class="m-auto lg:w-full"
+          />
         </div>
 
-        <div class="hero-right flex flex-col gap-2 items-center max-w-xs mx-auto mb-12">
+        <div
+          class="hero-right flex flex-col gap-2 items-center max-w-xs mx-auto mb-20 lg:max-w-md lg:items-start lg:m-0"
+        >
           <h1 class="font-bold text-4xl">Bring everyone together to build better products.</h1>
           <p>
             Manage makes it simple for software teams to plan day-to-day tasks while keeping the
@@ -80,8 +88,12 @@
         </div>
       </section>
 
-      <section class="info-section px-2 flex flex-col gap-10">
-        <div class="info-left flex flex-col gap-2 max-w-xs mx-auto">
+      <section
+        class="info-section px-2 flex flex-col gap-10 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-4 lg:max-w-7xl lg:mx-auto lg:mt-12"
+      >
+        <div
+          class="info-left flex flex-col gap-2 max-w-xs mx-auto lg:m-0 lg:items-start lg:text-left lg:max-w-md lg:mb-auto"
+        >
           <h2 class="font-bold text-2xl">What’s different about Manage?</h2>
           <p>
             Manage provides all the functionality your team needs, without the complexity. Our
@@ -89,7 +101,7 @@
           </p>
         </div>
 
-        <div class="info-right flex flex-col gap-10 text-left">
+        <div class="info-right flex flex-col gap-10 text-left lg:w-2/5">
           <div class="info flex flex-col gap-3">
             <div class="info-title flex gap-4 items-center w-full">
               <div class="info-number btn orange-btn font-medium">01</div>
@@ -127,7 +139,7 @@
         </div>
       </section>
 
-      <section class="slider-section py-10 flex flex-col gap-8 items-center">
+      <section class="slider-section py-10 flex flex-col gap-8 items-center lg:mt-12">
         <h2 class="font-bold text-2xl">What they’ve said</h2>
         <div class="slider relative pb-8 md:w-full">
           <!-- Swiper -->
@@ -186,7 +198,7 @@
                   class="slider-person relative flex flex-col gap-4 items-center justify-center px-4 py-4"
                 >
                   <img
-                    src="./images/avatar-anisha.png"
+                    src="./images/avatar-shanai.png"
                     alt="person"
                     class="person avatar w-32 z-10"
                   />
@@ -210,18 +222,26 @@
     </main>
 
     <footer>
-      <div class="footer-top px-6 py-16 flex flex-col gap-6 items-center">
-        <h3 class="font-medium text-2xl">Simplify how your team works today.</h3>
+      <!-- Footer top -->
+      <div
+        class="footer-top px-6 py-16 flex flex-col gap-6 items-center lg:flex-row lg:justify-evenly lg:mt-24"
+      >
+        <h3 class="font-medium text-2xl lg:w-96 lg:text-left lg:text-3xl">
+          Simplify how your team works today.
+        </h3>
         <button class="btn white-btn">Get Started</button>
       </div>
 
-      <div class="footer-bottom py-10 px-4 flex flex-col gap-10">
-        <form class="flex gap-2 justify-center">
+      <!-- Footer bottom -->
+      <div
+        class="footer-bottom py-10 px-4 flex flex-col gap-10 lg:flex-row-reverse lg:justify-center lg:gap-24 lg:py-16"
+      >
+        <form class="flex gap-2 justify-center lg:order-2 lg:items-start">
           <input type="email" placeholder="Updates in your inbox…" />
           <button type="submit" class="btn orange-btn">Go</button>
         </form>
 
-        <div class="footer-list flex gap-12 justify-center">
+        <div class="footer-list flex gap-12 justify-center lg:order-3 lg:gap-16">
           <ul class="flex flex-col gap-4">
             <li>
               <a href="#/"> Home </a>
@@ -250,7 +270,9 @@
           </ul>
         </div>
 
-        <div class="footer-section flex flex-col gap-8 justify-center items-center mt-4">
+        <div
+          class="footer-section flex flex-col gap-8 justify-center items-center mt-4 lg:order-5 lg:flex-col-reverse lg:justify-between lg:mb-4 lg:items-start"
+        >
           <div class="footer-social-links flex gap-6 justify-center">
             <a href="#/">
               <span class="sr-only">Facebook</span>
@@ -295,7 +317,7 @@
               </svg>
             </a>
           </div>
-          <div class="footer-logo mt-6">
+          <div class="footer-logo mt-6 lg:mt-0">
             <!-- <img src="./images/logo.svg" alt="company logo - manage" /> -->
             <svg xmlns="http://www.w3.org/2000/svg" width="146" height="24">
               <g fill="none" fill-rule="evenodd">

@@ -1,6 +1,7 @@
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 h1,
@@ -37,7 +38,6 @@ header:after {
   content: "";
   position: absolute;
   background-image: url(./images/bg-tablet-pattern.svg);
-  background-size: cover;
   background-position: right -14%;
   background-repeat: no-repeat;
   background-size: 18rem 18rem;
@@ -96,6 +96,7 @@ Main
 */
 header {
   overflow-x: clip;
+  /* overflow-x: hidden; */
 }
 /* btns */
 .btn {
@@ -132,13 +133,13 @@ header {
 .hero-section {
   position: relative;
   overflow-x: clip;
+  /* overflow-x: hidden; */
 }
 .hero-section:after {
   z-index: -1;
   content: "";
   position: absolute;
   background-image: url(./images/bg-tablet-pattern.svg);
-  background-size: cover;
   background-position: right 76%;
   background-repeat: no-repeat;
   background-size: 22rem 22rem;
@@ -218,6 +219,7 @@ form input {
   padding: 0.7rem 1.5rem;
   border-radius: 50px;
   width: 13rem;
+  color: hsl(233, 12%, 13%);
 }
 form input::placeholder {
   font-size: 0.8rem;
@@ -276,8 +278,104 @@ footer li {
     border-radius: 25px;
   }
 }
-@media screen and (min-width: 1078px) {
+@media screen and (min-width: 1024px) {
+  /* slider */
+  .slider {
+    background-color: white;
+  }
+  .slider-person {
+    padding: 2rem 2rem;
+  }
   .swiper {
-    width: 950px;
+    /* width: 950px; */
+    min-width: 950px;
+    max-width: 1078px;
+    /* width: fit-content; */
+    max-width: 72rem;
+  }
+  /* header / nav  */
+  header .btn {
+    display: block;
+  }
+  .nav-toggle-btn {
+    display: none;
+  }
+  .nav-menu {
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  .nav-menu li:hover {
+    color: #909090;
+  }
+  /* footer */
+  .footer-top {
+    background-image: url(./images/bg-simplify-section-desktop.svg);
+  }
+  /* desktop footer copyright postion */
+  form {
+    position: relative;
+  }
+  form:after {
+    content: "Copyright 2020. All Rights Reserved";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #a1a1a1;
+    font-size: min(0.7rem, 4vw);
+  }
+  .copyright {
+    display: none;
+  }
+  /* background images */
+  /* header / top right bg img */
+  body:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    background-image: url(./images/bg-tablet-pattern.svg);
+    background-position: right -14%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30rem;
+    height: 30rem;
+    top: -67px;
+    right: 19px;
+  }
+  /* footer / bottom left bg img */
+  .slider-section {
+    position: relative;
+  }
+  .slider-section:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    background-image: url(./images/bg-tablet-pattern.svg);
+    background-position: right -14%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30rem;
+    height: 30rem;
+    left: -266px;
+    top: -30%;
+  }
+  /* hide mobiel bg images */
+  header:after {
+    content: none;
+  }
+  .hero-section:after {
+    content: none;
   }
 }
+/* TODO: Form error status */

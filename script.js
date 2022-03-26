@@ -13,7 +13,6 @@ var swiper = new Swiper(".mySwiper", {
   breakpoints: {
     // when window width is >= 640px
     320: {
-      // width: 320,
       width: 314,
       slidesPerView: 1,
       slidesPerGroup: 1,
@@ -25,7 +24,7 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerGroup: 2,
     },
     // when window width is >= 1078px
-    1078: {
+    1024: {
       width: 950,
       slidesPerView: 3,
       slidesPerGroup: 3,
