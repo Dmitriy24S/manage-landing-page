@@ -236,8 +236,11 @@
       <div
         class="footer-bottom py-10 px-4 flex flex-col gap-10 lg:flex-row-reverse lg:justify-center lg:gap-24 lg:py-16"
       >
-        <form class="flex gap-2 justify-center lg:order-2 lg:items-start">
-          <input type="email" placeholder="Updates in your inbox…" />
+        <form class="email-form flex gap-2 justify-center items-start lg:order-2 lg:items-start">
+          <div class="input-wrapper flex flex-col gap-4">
+            <input type="email" id="email-input" placeholder="Updates in your inbox…" />
+            <small class="error-msg">Please enter a valid email</small>
+          </div>
           <button type="submit" class="btn orange-btn">Go</button>
         </form>
 

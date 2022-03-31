@@ -1,3 +1,4 @@
+// Navigation menu
 const navToggle = document.querySelector(".nav-toggle-btn");
 const menu = document.querySelector(".nav-menu");
 
@@ -6,6 +7,7 @@ navToggle.addEventListener("click", () => {
   navToggle.classList.toggle("active");
 });
 
+// Swiper carousel slider
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   loop: true,
@@ -39,3 +41,23 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+
+// Input form email validation error message
+const form = document.querySelector(".email-form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const emailInputValue = e.target[0].value;
+
+  if (!validateEmail(emailInputValue)) {
+    form.classList.add("input-error");
+  } else {
+    form.classList.remove("input-error");
+  }
+});
+
+function validateEmail(email) {
+  var re =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
