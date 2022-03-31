@@ -232,6 +232,18 @@ footer li {
 .footer-social-links a {
   transform: scale(1.5);
 }
+/* Form input error status */
+.error-msg {
+  visibility: hidden;
+}
+.input-error input {
+  border: 2px solid rgb(224, 49, 18);
+  color: rgb(207, 39, 9);
+}
+.input-error .error-msg {
+  visibility: visible;
+  color: rgb(207, 39, 9);
+}
 /* copyright */
 .copyright p {
   color: hsl(0deg 0% 67%);
@@ -379,17 +391,3 @@ footer li {
     content: none;
   }
 }
-
-/* Form input error status */
-.error-msg {
-  visibility: hidden;
-}
-.input-error input {
-  border: 2px solid rgb(224, 49, 18);
-  color: rgb(207, 39, 9);
-}
-.input-error .error-msg {
-  visibility: visible;
-  color: rgb(207, 39, 9);
-}
-/* TODO: Form error status */
