@@ -1,8 +1,15 @@
 // Navigation menu
 const navToggle = document.querySelector(".nav-toggle-btn");
-const menu = document.querySelector(".nav-menu");
+const menu = document.querySelector(".nav-menu-container");
+const navMobileOverlay = document.querySelector(".nav-menu-mobile-overlay ");
 
 navToggle.addEventListener("click", () => {
+  menu.classList.toggle("show");
+  navToggle.classList.toggle("active");
+});
+
+// Close mobile nav menu when click on overlay/backdrop
+navMobileOverlay.addEventListener("click", () => {
   menu.classList.toggle("show");
   navToggle.classList.toggle("active");
 });

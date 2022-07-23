@@ -48,21 +48,43 @@ header:after {
 header .btn {
   display: none;
 }
-.nav-menu {
-  display: none;
-}
+
 /* nav desktop btn hide */
 .nav-close-btn {
   display: none;
 }
-/* nav menu mobile show/hide */
-.nav-menu.show {
+.nav-toggle-btn {
+  z-index: 50;
+}
+/* .nav-menu container show/hide */
+.nav-menu-container {
+  /* display: none; */
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+  z-index: 11;
+}
+.nav-menu-container.show {
+  visibility: visible;
+  opacity: 1;
+}
+/* nav menu mobile overlay/backdrop */
+.nav-menu-mobile-overlay {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(0deg, #1e1e1e, #04040466);
+  z-index: 11;
+}
+/* nav menu mobile*/
+.nav-menu {
   position: absolute;
   background-color: white;
   padding: 2rem;
   width: calc(100vw - 4rem);
   top: 4rem;
-  z-index: 10;
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
@@ -71,10 +93,11 @@ header .btn {
   margin: 0 auto;
   border-radius: 5px;
   box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 27%);
+  z-index: 11;
 }
-.show {
-  display: block;
-}
+/* .show { */
+/* display: block; */
+/* } */
 .nav-hamburger-btn {
   display: block;
 }
@@ -260,7 +283,8 @@ footer li {
 }
 
 @media (hover) {
-  .nav-menu.show li:hover {
+  /* mobile size screen hover nav menu text color */
+  .nav-menu-container.show li:hover {
     color: hsl(12, 88%, 59%);
   }
   .orange-btn:hover {
@@ -291,6 +315,7 @@ footer li {
     border-radius: 25px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   /* slider */
   .slider {
@@ -300,18 +325,26 @@ footer li {
     padding: 2rem 2rem;
   }
   .swiper {
-    /* width: 950px; */
     min-width: 950px;
-    max-width: 1078px;
-    /* width: fit-content; */
     max-width: 72rem;
   }
-  /* header / nav  */
+  /* Desktop header / nav  */
   header .btn {
     display: block;
   }
   .nav-toggle-btn {
     display: none;
+  }
+  .nav-menu-mobile-overlay {
+    display: none;
+  }
+  .nav-menu-container,
+  .nav-menu-container.show {
+    position: relative;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: none;
   }
   .nav-menu {
     position: relative;
@@ -336,7 +369,7 @@ footer li {
   .footer-top {
     background-image: url(./images/bg-simplify-section-desktop.svg);
   }
-  /* desktop footer copyright postion */
+  /* Desktop footer copyright position */
   form {
     position: relative;
   }
@@ -383,7 +416,7 @@ footer li {
     left: -266px;
     top: -30%;
   }
-  /* hide mobiel bg images */
+  /* hide mobile bg images */
   header:after {
     content: none;
   }
